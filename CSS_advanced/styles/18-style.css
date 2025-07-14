@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -43,7 +45,7 @@ html {
   --nav-item-font-family: var(--font-family-title);
   --nav-item-font-weight: var(--font-weight-bold);
   --nav-item-font-size: var(--font-size-medium);
-  --nav-item-letter-spacing: 0.4rem;
+  --nav-item-letter-spacing: 0.04rem;
   --nav-item-display: inline-block;
   --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-primary);
@@ -58,22 +60,19 @@ body {
   line-height: var(--line-height-base);
 }
 
-a {
-  background-color: transparent;
-  color: var(--text-color);
-  text-decoration: none;
+main {
+  display: block;
 }
 
-a:visited {
-  font-style: italic;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  background-color: var(--color-light-grey);
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 pre,
@@ -82,6 +81,37 @@ kbd,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+a[href] {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a[href]:visited {
+  font-style: italic;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+a[href]:active {
+  background-color: var(--color-light-grey);
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
 }
 
 small {
@@ -206,8 +236,32 @@ summary {
 }
 
 template,
-[hidden] {
+[hidden],
+.visually-hidden {
   display: none;
+}
+
+.card-category {
+  color: var(--color-primary);
+}
+
+.section-header {
+  text-align: var(--section-header-align);
+}
+
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
+}
+
+.section-tagline {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  text-transform: var(--section-tagline-transform);
+  font-weight: var(--font-weight-bold);
 }
 
 .container {
@@ -232,7 +286,6 @@ h6 {
 
 .section-header {
   padding: var(--section-header-padding);
-  text-align: var(--section-header-align);
 }
 
 .section-body {
@@ -246,25 +299,6 @@ h6 {
 
 .footer {
   padding: var(--footer-padding);
-}
-
-.section-title {
-  font-family: var(--font-family-title);
-  font-size: var(--font-size-xx-large);
-  font-weight: var(--font-weight-bold);
-  margin: var(--section-title-margin);
-  color: var(--section-title-color);
-}
-
-.section-tagline {
-  color: var(--color-primary);
-  font-family: var(--font-family-title);
-  text-transform: var(--section-tagline-transform);
-  font-weight: var(--font-weight-bold);
-}
-
-.card-category {
-  color: var(--color-primary);
 }
 
 .navbar-menu {
